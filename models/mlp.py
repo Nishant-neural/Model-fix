@@ -15,7 +15,7 @@ class SimpleMLP(nn.Module):
         self.fc2 = nn.Linear(256, 10)
 
     def forward(self, x):
-        x = self.flatten(x)        # (batch, 1, 28, 28) → (batch, 784)
+        x = self.flatten(x)      
         x = self.relu(self.fc1(x))
         x = self.dropout(x)
         x = self.fc2(x)
